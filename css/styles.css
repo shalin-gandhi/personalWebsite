@@ -4,11 +4,6 @@
 }
 
 @font-face {
-    font-family: lobster;
-    src: url(../fonts/Lobster_1.3.otf);
-}
-
-@font-face {
     font-family: ptSerif;
     src: url(../fonts/PTF55F.ttf);
 }
@@ -42,13 +37,19 @@
 .mb30 {
 	margin-bottom: 30px;
 }
+.mt30 {
+	margin-top: 30px;
+}
+.mauto {
+	margin: 0 auto;
+}
 .no-wrap {
 	white-space: nowrap;
 }
 /** end utility classes **/ 
 
 body {
-	font-family: Arial, sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	color: #000;
 }
 
@@ -61,7 +62,7 @@ h1 {
 }
 
 h4 {
-	font-size: 20px;
+	font-size: 21px;
 }
 
 #home {
@@ -120,6 +121,24 @@ h4 {
     width: 200px;
     background-color: #fff;
 }
+#about .section-title::after {
+	width: 116px;
+    background-color: #000;	
+}
+
+#projects .section-title::after {
+	width: 186px;
+}
+
+#contact .section-title::after {
+	width: 170px;
+    background-color: #000;	
+}
+
+#techexp .section-title::after {
+	width: 275px;
+    background-color: #000;	
+}
 
 .designation {
 	font-size: 17px;
@@ -128,6 +147,50 @@ h4 {
 .work-desc {
 	margin-bottom: 10px;
 	font-size: 13px;
+}
+
+.link-icon {
+	height: 14px;
+	margin-left: 5px;
+}
+
+.contact-icon {
+	height: 32px;
+	margin-right: 5px; 
+	display: inline-block;
+	width: 32px;
+}
+
+.contact-link {
+	display: inline-block;
+	white-space: normal;
+	word-break: break-all;
+	width: calc(100% - 45px);
+	vertical-align: middle;
+}
+.contact-block {
+	margin-bottom: 12px;
+}
+#contact-wrapper {
+	max-width: 392px;
+	margin: 0 auto;
+	color: #000;
+}
+#contact-wrapper a, #contact-wrapper a:hover, #contact-wrapper a:focus, #contact-wrapper a:visited {
+	color: #000;
+	text-decoration: none;	
+}
+
+li {
+	background: #614385;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(left, #516395, #614385);
+    background: -o-linear-gradient(left, #516395, #614385);
+    background: linear-gradient(to left, #516395, #614385);
+    padding: 10px;
+    color: #fff;
+    font-size: 16px;
+    margin: 5px;
+    display: inline-block;
 }
 
 /** start animations **/
@@ -163,10 +226,13 @@ h4 {
 	.sectpad {
 		padding: 0 100px;
 	}
+	.date-m10 {
+		margin-top: 10px; 
+	}
 }
 
 @media (max-width: 767px) {
-	
+
 	.sectpad {
 		padding: 0 20px;
 	}
